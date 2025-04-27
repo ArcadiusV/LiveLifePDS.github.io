@@ -1,0 +1,58 @@
+/* Impostazioni generali */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #001f3f;
+}
+
+/* Contenitore principale */
+.container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Header */
+header {
+    margin-bottom: 40px;
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #003366;
+}
+
+/* Bottoni */
+.button-group {
+    margin-top: 30px;
+}
+
+.button-group button {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button-group button:hover {
+    background-color: #0055a5;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    font-size: 0.9em;
+    color: #666;
+}
