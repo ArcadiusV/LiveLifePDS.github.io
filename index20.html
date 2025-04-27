@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modulo Rapporto CNR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style20.css" />
+    <!-- Using a stable version of Select2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="cnrForm">
+        <h1>📝 Modulo Rapporto CNR</h1>
+
+        <div class="form-group">
+          <label for="nomeAgente">Nome Agente</label>
+          <input type="text" id="nomeAgente" name="nomeAgente" required />
+        </div>
+
+        <div class="form-group">
+          <label for="cnr">CNR #</label>
+          <input type="text" id="cnr" name="cnr" required />
+        </div>
+
+        <div class="form-group">
+          <label for="luogo">Luogo dell'intervento</label>
+          <input type="text" id="luogo" name="luogo" required />
+        </div>
+
+        <div class="form-group">
+          <label for="agentiSelect">Agente/i intervenuti</label>
+          <select id="agentiSelect" name="agenti[]" multiple="multiple">
+            <option value="">-- Seleziona uno o più agenti --</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="reatiSelect">Reati</label>
+          <select id="reatiSelect" multiple="multiple">
+            <option value="">-- Seleziona uno o più reati --</option>
+          </select>
+          <div id="reatiList" class="form-group"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="dinamica">Dinamica dei fatti</label>
+          <textarea id="dinamica" name="dinamica" rows="4" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="oggetti">Oggetti sequestrati</label>
+          <textarea id="oggetti" name="oggetti" rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="fotoUrls">Foto degli arresti (link)</label>
+          <textarea id="fotoUrls" name="fotoUrls" placeholder="Inserisci uno o più link separati da una nuova riga" rows="3"></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="giudizio">In attesa di giudizio</label>
+          <select id="giudizio" name="giudizio">
+            <option>Sì</option>
+            <option>No</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="procuratore">Procuratore</label>
+          <select id="procuratore" name="procuratore">
+            <option>Non avvisato</option>
+            <option>Avvisato</option>
+            <option>Presente</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="telefono">Recapito Telefonico</label>
+          <input type="text" id="telefono" name="telefono" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" multiple />
+        </div>
+
+        <div class="form-group">
+          <label for="rapporto">Numero Rapporto Interno</label>
+          <input type="text" id="rapporto" name="rapporto" />
+        </div>
+
+        <button type="submit">📤 Invia a Discord</button>
+      </form>
+    </div>
+
+    <!-- Load jQuery first -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Load the stable version of Select2 -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <!-- Your custom script -->
+    <script src="script20.js"></script>
+  </body>
+</html>
