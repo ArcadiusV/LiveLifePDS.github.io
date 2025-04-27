@@ -3,36 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Polizia di Stato</title>
+    <title>Pagina Principale - Polizia di Stato</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login-container">
-        <img src="logo_polizia.png" alt="Logo Polizia di Stato" class="logo-login">
-        <h1>Accesso Operatori</h1>
+    <div class="container">
+        <header>
+            <img src="logo_polizia.png" alt="Logo Polizia di Stato" class="logo">
+            <h1>Benvenuto nel Portale della Polizia di Stato</h1>
+            <p class="slogan">"Sub Lege Libertas" - Sotto la Legge, la Libertà</p>
+        </header>
 
-        <form onsubmit="return checkLogin(event)">
-            <input type="text" id="username" placeholder="Nome Utente" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <button type="submit">Accedi</button>
-            <p id="error-message" class="error-message"></p>
-        </form>
+        <div class="button-group">
+            <button onclick="window.location.href='index2.html'">📝 Modulo Rapporto CNR</button>
+            <button onclick="window.location.href='index3.html'">📝 Modulo Rilascio Porto D'armi</button>
+        </div>
+
+        <section class="info-boxes">
+            <div class="info-box">
+                <h2>Missione</h2>
+                <p>Garantire la sicurezza dei cittadini, difendere la legalità, tutelare i diritti fondamentali.</p>
+            </div>
+            <div class="info-box">
+                <h2>Servizi Online</h2>
+                <p>Compila rapidamente moduli e richieste ufficiali direttamente dal portale.</p>
+            </div>
+            <div class="info-box">
+                <h2>Contatti Rapidi</h2>
+                <p>Per emergenze chiama il <strong>112</strong> o contatta il tuo commissariato di zona.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 LiveLife PDS - Tutti i diritti riservati</p>
+        </footer>
     </div>
-
-    <script>
-        function checkLogin(event) {
-            event.preventDefault(); // Impedisce il refresh della pagina
-            
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const errorMessage = document.getElementById('error-message');
-
-            if (username === 'OperatoreStato' && password === 'Operatore852') {
-                window.location.href = 'index.html';
-            } else {
-                errorMessage.textContent = 'Nome utente o password errati.';
-            }
-        }
-    </script>
 </body>
 </html>
