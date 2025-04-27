@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modulo Rilascio Licenza di Caccia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style3.css" />
+    <!-- Using a stable version of Select2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="cnrForm">
+        <h1>📝 Modulo Rilascio Licenza di Caccia</h1>
+
+        <p class="form-description">
+          Ricordo che il rilascio della licenza di caccia è possibile solo da <strong>commissario in poi</strong>.<br>
+          Per ottenere il link delle immagini dovrete sfruttare la <strong>fotocamera</strong>, che può essere ottenuta dall'<strong>armeria della Qvestura</strong>.<br>
+          Una volta fatta la foto volto riconoscimento al soggetto, vi verrà copiato automaticamente il link negli appunti, quindi recatevi nel campo del link della foto e incollatelo con <kbd>Ctrl</kbd> + <kbd>V</kbd>.<br>
+          Ricordo inoltre che <strong>tutti i documenti andranno riconsegnati ai cittadini</strong> una volta terminata la compilazione di questo documento.
+        </p>
+
+        <div class="form-group">
+          <label for="nomeAgente">Nome Agente</label>
+          <input type="text" id="nomeAgente" name="nomeAgente" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="nomeCittadino">Nome Cittadino</label>
+          <input type="text" id="nomeCittadino" name="nomeCittadino" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="fotoUrls"> Foto riconoscimento</label>
+          <textarea id="fotoUrls" name="fotoUrls" rows="4" placeholder="https://esempio.com/immagine1.jpg"></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="dataNascita">Data di nascita</label>
+          <input type="text" id="dataNascita" name="dataNascita" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="telefono">Recapito Telefonico</label>
+          <input type="text" id="telefono" name="telefono" />
+        </div>
+        
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" multiple />
+        </div>        
+
+        <button type="submit">📤 Invia a Discord</button>
+      </form>
+    </div>
+
+    <!-- Load jQuery first -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Load the stable version of Select2 -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <!-- Your custom script -->
+    <script src="script3.js"></script>
+  </body>
+</html>
