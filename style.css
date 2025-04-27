@@ -7,42 +7,6 @@ body {
     color: #001f3f;
 }
 
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #003366;
-    padding: 10px 20px;
-    color: white;
-}
-
-.navbar-left {
-    display: flex;
-    align-items: center;
-}
-
-.logo-navbar {
-    width: 40px;
-    margin-right: 10px;
-}
-
-.navbar-title {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.navbar-right a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 1em;
-}
-
-.navbar-right a:hover {
-    text-decoration: underline;
-}
-
 /* Contenitore principale */
 .container {
     text-align: center;
@@ -52,6 +16,11 @@ body {
 /* Header */
 header {
     margin-bottom: 30px;
+}
+
+.logo {
+    width: 80px; /* Logo ridotto */
+    margin-bottom: 20px;
 }
 
 h1 {
