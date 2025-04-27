@@ -1,94 +1,56 @@
-/* Impostazioni generali */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Pagina di Login */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     background: linear-gradient(to bottom, #e6ecf3, #ffffff);
-    color: #001f3f;
-}
-
-/* Contenitore principale */
-.container {
     text-align: center;
-    padding: 40px 20px;
 }
 
-/* Header */
-header {
-    margin-bottom: 30px;
-}
-
-.logo {
-    width: 80px; /* Logo ridotto */
+.logo-login {
+    width: 80px;
     margin-bottom: 20px;
 }
 
-h1 {
-    font-size: 2.5em;
+.login-container h1 {
+    font-size: 2em;
     color: #003366;
+    margin-bottom: 20px;
 }
 
-.slogan {
-    font-size: 1.2em;
-    font-style: italic;
-    color: #0055a5;
-    margin-top: 10px;
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
 }
 
-/* Bottoni */
-.button-group {
-    margin-top: 30px;
+.login-container input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #003366;
+    border-radius: 8px;
+    font-size: 1em;
 }
 
-.button-group button {
+.login-container button {
     background-color: #003366;
     color: white;
     border: none;
-    padding: 15px 30px;
-    margin: 10px;
-    font-size: 1.2em;
+    padding: 12px;
     border-radius: 8px;
+    font-size: 1.2em;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s;
 }
 
-.button-group button:hover {
+.login-container button:hover {
     background-color: #0055a5;
-    transform: scale(1.05);
 }
 
-/* Sezione Informazioni */
-.info-boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 50px;
-}
-
-.info-box {
-    background-color: #f0f6ff;
-    border: 2px solid #003366;
-    border-radius: 10px;
-    width: 300px;
-    margin: 15px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 51, 102, 0.2);
-    transition: transform 0.3s;
-}
-
-.info-box:hover {
-    transform: translateY(-5px);
-}
-
-.info-box h2 {
-    color: #003366;
-    margin-bottom: 10px;
-}
-
-/* Footer */
-footer {
-    margin-top: 50px;
+.error-message {
+    color: red;
+    margin-top: 10px;
     font-size: 0.9em;
-    color: #666;
 }
