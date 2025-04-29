@@ -14,12 +14,10 @@ document.getElementById('cnrForm').addEventListener('submit', async function (e)
     .filter(url => url.startsWith('http'));
 
   const payload = {
-    content: `**📄 Modulo Rilascio Porto D'armi compilato**\n
+    content: `**📄 Modulo Rilascio licenza di caccia compilato**\n
 **👮 Nome Agente:** ${getFieldValue('nomeAgente')}
 **🧑‍💼 Nome Cittadino:** ${getFieldValue('nomeCittadino')}
 **🎂 Data di nascita:** ${getFieldValue('dataNascita')}
-**📌 In qualità di:** ${getFieldValue('qualita')}
-**🔫 Tipo di Porto D'armi Rilasciato:** ${getFieldValue('portoRilasciato')}
 **📞 Recapito Telefonico:** ${getFieldValue('telefono')}
 **📧 E-mail:** ${getFieldValue('email')}
 **🕒 Data e ora di compilazione:** ${dataOraString}`,
@@ -35,7 +33,7 @@ document.getElementById('cnrForm').addEventListener('submit', async function (e)
   formData.append("payload_json", JSON.stringify(payload));
 
   try {
-    const response = await fetch("https://discord.com/api/webhooks/1366170921261334649/a5Wh3lCW45ZC1PwdPZ_uELkOznwezJh2ARApxgPQ0Xqua-wrQMRb2kg3e3TJydMOc2t9", {
+    const response = await fetch("https://discord.com/api/webhooks/1364602770254204958/OyPynSQEPLVmBRRUHS2rsD83RdptajUNyNID64FcG9zlPexKRcDbdGkKcJ54Q0LVHDX3?thread_id=1358105993841610994", {
       method: 'POST',
       body: formData,
     });
