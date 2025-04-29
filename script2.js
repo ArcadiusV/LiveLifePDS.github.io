@@ -111,7 +111,8 @@ let agentiData = [
   { id: 'g.marrone', text: 'Ass. Gennaro Marrone' },
   { id: 'g.leroy', text: 'Agt. Giuseppe Leroy' },
   { id: 'f.mangiagatti', text: 'Ass. Franco Mangiagatti' },
-  { id: 'e.tackleberry', text: 'Ass .Eugene Tackleberry' }
+  { id: 'e.tackleberry', text: 'Ass. Eugene Tackleberry' },
+  { id: 'a.castagno', text: 'Ass. Alessio Castagno' }
 ];
 
 let reatiList = [];
