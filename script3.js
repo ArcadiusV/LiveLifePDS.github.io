@@ -33,7 +33,7 @@ document.getElementById('cnrForm').addEventListener('submit', async function (e)
   formData.append("payload_json", JSON.stringify(payload));
 
   try {
-    const response = await fetch("https://discord.com/api/webhooks/1364602770254204958/OyPynSQEPLVmBRRUHS2rsD83RdptajUNyNID64FcG9zlPexKRcDbdGkKcJ54Q0LVHDX3?thread_id=1358105993841610994", {
+    const response = await fetch("https://discord.com/api/webhooks/1364602770254204958/OyPynSQEPLVmBRRUHS2rsD83RdptajUNyNID64FcG9zlPexKRcDbdGkKcJ54Q0LVHDX3?thread_id=1365408455497613403", {
       method: 'POST',
       body: formData,
     });
