@@ -2,6 +2,7 @@ let reatiData = [
   { title: 'Articolo 9 ter - Gare clandestine', description: 'Punisce la partecipazione a gare non autorizzate su strade pubbliche, con sequestro del veicolo.', price: 3500, month: 0 },
   { title: 'Art. 72 - Veicolo non omologato', description: 'Sanziona l\'uso di veicoli non omologati secondo le normative di sicurezza (neon si, Fari colorati no).', price: 1000, month: 0 },
   { title: 'Art. 78 - Veicolo modificato illegalmente', description: 'Pena per veicoli modificati senza omologazione, come fari non conformi (Kit Turbo, N2o) con sequestro.', price: 7500, month: 0 },
+  { title: 'Art. 78-bis - Produzione e vendita di bombole NOS', description: 'Se produce o possiede o detiene materiale verso la produzione di bombole NOS o la bombola NOS stessa.', price: 7500, month: 0 },
   { title: 'Art. 100 - Targa mancante o illeggibile', description: 'Prevede sanzioni per veicoli con targa mancante o illeggibile.', price: 3500, month: 0 },
   { title: 'Art. 116 - Guida senza patente o revocata', description: 'Guida senza patente o con patente revocata, con multa e sequestro del veicolo.', price: 1000, month: 0 },
   { title: 'Art. 126 - Guida con patente scaduta', description: 'Guida con patente scaduta, con multa e obbligo di rinnovo.', price: 500, month: 0 },
@@ -17,6 +18,7 @@ let reatiData = [
   { title: 'Art. 193 - Obbligo di assicurazione', description: 'Guida senza assicurazione obbligatoria, con multa e sequestro del veicolo.', price: 1500, month: 0 },
   { title: 'Art. 223 - Recidiva 1', description: 'In caso di recidiva, aumento del 30% della pena e della multa.', price: 0, month: 0 },
   { title: 'Art. 223 bis - Recidiva 2', description: 'In caso di recidiva, aumento del 60% della pena e della multa.', price: 0, month: 0 },
+  { title: 'Art. 477-482 - Targhe oscurate o contraffatte', description: 'Se produce o possiede una targa oscurata o contraffatta.', price: 0, month: 0 },
   { title: 'Art. 56 & Art. 575 – Tentato omicidio', description: 'Chi compie atti idonei e diretti a uccidere, ma senza riuscirci.', price: 7000, month: 10 },
   { title: 'Art. 575 – Omicidio', description: 'Chiunque cagiona la morte (definitiva) di un soggetto.', price: 35000, month: 25 },
   { title: 'Art. 580 – Istigazione o aiuto al suicidio', description: 'Indurre o agevolare il suicidio di una persona.', price: 10000, month: 10 },
@@ -69,10 +71,12 @@ let reatiData = [
   { title: 'D.P.R. 309/1990 – Art. 75 – Uso personale di stupefacenti (max 10)', description: 'Possesso di droga per uso personale; reato amministrativo, non penale.', price: 4500, month: 0 },
   { title: 'Art. 416 – Associazione a delinquere', description: 'Due o più persone si associano per commettere reati.', price: 4000, month: 3 },
   { title: 'Art. 416-bis – Associazione di tipo mafioso', description: 'Associazione con metodi mafiosi e controllo del territorio.', price: 7500, month: 5 },
+  { title: 'Art. 421 – Pubblica intimidazione', description: 'Minacciare pubblicamente di commettere delitti contro la pubblica incolumità (detenzione in cella).', price: 2500, month: 0 },
   { title: 'Art. 435 – Fabbricazione o possesso di ordigni esplosivi', description: 'Costruire o detenere esplosivi senza autorizzazione (anche petardi e simili).', price: 5000, month: 3 },
   { title: 'Art. 452-bis – Inquinamento ambientale', description: 'Causare inquinamento (in tutte le sue forme) all’ambiente.', price: 2000, month: 0 },
+  { title: 'Art. 707-bis – Possesso di grimaldelli o chiavi alterate', description: 'Chiunque è in possesso di grimaldelli o chiavi alterate senza previa autorizzazione o giustifazione.', price: 2000, month: 0 },
   { title: 'Art. 727-bis – Uccisione di animali', description: 'Reati contro la fauna selvatica.', price: 3000, month: 0 },
-  { title: 'Art. 421 – Pubblica intimidazione', description: 'Minacciare pubblicamente di commettere delitti contro la pubblica incolumità (detenzione in cella).', price: 2500, month: 0 },
+  { title: 'Art. 28 Legge 110/75 – Detenzione materiale d\'armamento militare', description: 'Chiunque, senza la prescritta autorizzazione, detiene materiali di armamento militare (tra cui giubotti balistici di tipo militare).', price: 4000, month: 3 },
   { title: 'Art. 697 – Detenzione abusiva di armi', description: 'Possesso di armi da fuoco senza licenza o autorizzazione.', price: 4000, month: 3 },
   { title: 'Art. 698 – Detenzione di armi da guerra o tipo guerra', description: 'Detenere armi da guerra senza autorizzazione speciale (Fucili a pompa o Fucili d\'assalto).', price: 10000, month: 10 },
   { title: 'Art. 699 – Porto abusivo di armi / Omessa custodia', description: 'Portare armi in luogo pubblico o aperto al pubblico senza permesso o non all\'interno della valigetta.', price: 3000, month: 3 },
@@ -83,31 +87,19 @@ let reatiData = [
 ];
 
 let agentiData = [
-  { id: 'e.ttone', text: 'Dir. Gnr. Erminio Ttone' },
-  { id: 'c.marshal', text: 'Dir. Gnr. Chris Marshall' },
-  { id: 'c.perna', text: 'Comm. Ciccio Perna' },
-  { id: 'j.wick', text: 'Ispt. John Wick' },
-  { id: 'd.cicchettini', text: 'Ispt. Damian Cicchettini' },
-  { id: 's.vega', text: 'Ispt. Soleil Vega' },
-  { id: 'm.rieti', text: 'Sovr. Matteo Rieti' },
-  { id: 't.esposito', text: 'Sovr. Tony Esposito' },
-  { id: 'r.esposito', text: 'Comm. Raffaele Esposito' },
-  { id: 'd.zelenskyi', text: 'Comm. Dima Zelenskyi' },
-  { id: 'c.costa', text: 'Sovr. Ciro Costa' },
-  { id: 'a.boccuni', text: 'Ass. Andrea Boccuni' },
-  { id: 'a.pessina', text: 'Ass. Adolfo Pessina' },
-  { id: 'c.zalone', text: 'Ass. Checco Zalone' },
-  { id: 'd.grillo', text: 'Sovr. Dario Grillo' },
-  { id: 'b.provenzano', text: 'Sovr. Bernardo Provenzano' },
-  { id: 'g.esposito', text: 'Ass. Gennaro Esposito' },
-  { id: 'f.sanchez', text: 'Ass. Felipe Sanchez' },
-  { id: 'a.capuano', text: 'Ass. Andrea Capuano' },
-  { id: 'g.martinez', text: 'Agt. Grecya Martinez' },
-  { id: 's.vitale', text: 'Agt. Stefano Vitale' },
-  { id: 'g.marrone', text: 'Ass. Gennaro Marrone' },
-  { id: 'g.leroy', text: 'Agt. Giuseppe Leroy' },
-  { id: 'f.mangiagatti', text: 'Ass. Franco Mangiagatti' },
-  { id: 'e.tackleberry', text: 'Ass .Eugene Tackleberry' }
+  { id: 'r.cobra', text: ' Generale Roberto Cobra' },
+{ id: 'f.gallo', text: 'Maggiore Fiorenzo Gallo' },
+{ id: 's.zanzotto', text: 'Tenente Simone Zanzotto' },
+{ id: 's.giovanardi', text: 'Tenente Salvatore Giovanardi' },
+{ id: 'm.coliandro', text: 'LuogoTenente Marco Coliandro' },
+{ id: 'r.morabito', text: 'Maresciallo Riccardo Morabito' },
+{ id: 'r.pensabene', text: 'Brigadiere Roberto Pensabene' },
+{ id: 'g.prudente', text: 'Vice-Brigadiere Guido Prudente' },
+{ id: 'j.carter', text: 'Finanziere Scelto Jack Carter' },
+{ id: 'd.mastrangelo', text: 'Finanziere Scelto Diana Mastrangelo' },
+{ id: 'a.zanini', text: 'Finanziere Achille Zanini' },
+{ id: 'a.diamante', text: 'Finanziere Antonio Diamante' },
+{ id: 'a.taranto', text: 'Finanziere Alessandro Taranto' }
 ];
 
 let reatiList = [];
@@ -236,7 +228,7 @@ ${getFieldValue('oggetti')}
   formData.append("payload_json", JSON.stringify(payload));
 
   try {
-    const response = await fetch("https://discord.com/api/webhooks/1364602770254204958/OyPynSQEPLVmBRRUHS2rsD83RdptajUNyNID64FcG9zlPexKRcDbdGkKcJ54Q0LVHDX3?thread_id=1358105993841610994", {
+    const response = await fetch("https://discord.com/api/webhooks/1366171091017404486/NgyfAUcsBdG6Uy_eXlXKoxtU_x_ovCe94Ck6dFdoeOgJVVjOpXhWcFZDj_4DUykS1g3f", {
       method: 'POST',
       body: formData,
     });
