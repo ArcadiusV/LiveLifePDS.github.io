@@ -87,31 +87,22 @@ let reatiData = [
 ];
 
 let agentiData = [
-  { id: 'e.ttone', text: 'Dir. Gnr. Erminio Ttone' },
-  { id: 'c.marshal', text: 'Dir. Gnr. Chris Marshall' },
-  { id: 'c.perna', text: 'Comm. Ciccio Perna' },
-  { id: 'j.wick', text: 'Ispt. John Wick' },
-  { id: 'd.cicchettini', text: 'Ispt. Damian Cicchettini' },
-  { id: 's.vega', text: 'Ispt. Soleil Vega' },
-  { id: 'm.rieti', text: 'Sovr. Matteo Rieti' },
-  { id: 't.esposito', text: 'Sovr. Tony Esposito' },
-  { id: 'r.esposito', text: 'Comm. Raffaele Esposito' },
-  { id: 'd.zelenskyi', text: 'Comm. Dima Zelenskyi' },
-  { id: 'c.costa', text: 'Sovr. Ciro Costa' },
-  { id: 'a.boccuni', text: 'Ass. Andrea Boccuni' },
-  { id: 'a.pessina', text: 'Ass. Adolfo Pessina' },
-  { id: 'c.zalone', text: 'Ass. Checco Zalone' },
-  { id: 'd.grillo', text: 'Sovr. Dario Grillo' },
-  { id: 'b.provenzano', text: 'Sovr. Bernardo Provenzano' },
-  { id: 'g.esposito', text: 'Ass. Gennaro Esposito' },
-  { id: 'f.sanchez', text: 'Ass. Felipe Sanchez' },
-  { id: 'a.capuano', text: 'Ass. Andrea Capuano' },
-  { id: 'g.martinez', text: 'Agt. Grecya Martinez' },
-  { id: 's.vitale', text: 'Agt. Stefano Vitale' },
-  { id: 'g.marrone', text: 'Ass. Gennaro Marrone' },
-  { id: 'g.leroy', text: 'Agt. Giuseppe Leroy' },
-  { id: 'f.mangiagatti', text: 'Ass. Franco Mangiagatti' },
-  { id: 'e.tackleberry', text: 'Ass .Eugene Tackleberry' }
+  { id: 't.garcia', text: 'Generale Tiago Garcia' },
+  { id: 'a.montana', text: 'Colonnello Andrea Montana' },
+  { id: 'f.guarino', text: 'Capitano Fabio Guarino' },
+  { id: 'b.duce', text: 'Maresciallo Ord.Benny Duce' },
+  { id: 's.star', text: 'Brigadiere Stella Star' },
+  { id: 'r.garcia', text: 'Brigadiere Ruben Garcia' },
+  { id: 'a.prosciutto', text: 'Maresciallo Ambrogio Prosciutto' },
+  { id: 'c.gray', text: 'Carabiniere Christian Gray' },
+  { id: 'e.loys', text: 'Carabiniere Edward Loys' },
+  { id: 'f.prestini', text: 'Carabiniere Fausto Prestini' },
+  { id: 'f.ferrari', text: 'Carabiniere Francesca Ferrari' },
+  { id: 'f.reso', text: 'Carabiniere Francesco Reso' },
+  { id: 'l.ferrari', text: 'Carabiniere Luigi Ferrari' },
+  { id: 's.bresciani', text: 'Carabiniere Sandro Bresciani' },
+  { id: 's.martinelli', text: 'Carabiniere Sebastian Martinelli' },
+  { id: 's.capobianco', text: 'Carabiniere Sebastiano Capobianco' }
 ];
 
 let reatiList = [];
