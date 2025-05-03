@@ -14,7 +14,7 @@ document.getElementById('cnrForm').addEventListener('submit', async function (e)
     .filter(url => url.startsWith('http'));
 
   const payload = {
-    content: `**📄 Modulo Rilascio Porto D'armi compilato**\n
+    content: `**📄 Modulo Rilascio Licenza di caccia compilato**\n
 **👮 Nome Agente:** ${getFieldValue('nomeAgente')}
 **🧑‍💼 Nome Cittadino:** ${getFieldValue('nomeCittadino')}
 **🎂 Data di nascita:** ${getFieldValue('dataNascita')}

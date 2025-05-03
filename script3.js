@@ -14,10 +14,12 @@ document.getElementById('cnrForm').addEventListener('submit', async function (e)
     .filter(url => url.startsWith('http'));
 
   const payload = {
-    content: `**📄 Modulo Rilascio licenza di caccia compilato**\n
+    content: `**📄 Modulo Rilascio Porto D'armi compilato**\n
 **👮 Nome Agente:** ${getFieldValue('nomeAgente')}
 **🧑‍💼 Nome Cittadino:** ${getFieldValue('nomeCittadino')}
 **🎂 Data di nascita:** ${getFieldValue('dataNascita')}
+**📌 In qualità di:** ${getFieldValue('qualita')}
+**🔫 Tipo di Porto D'armi Rilasciato:** ${getFieldValue('portoRilasciato')}
 **📞 Recapito Telefonico:** ${getFieldValue('telefono')}
 **📧 E-mail:** ${getFieldValue('email')}
 **🕒 Data e ora di compilazione:** ${dataOraString}`,
