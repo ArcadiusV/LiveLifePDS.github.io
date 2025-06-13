@@ -234,7 +234,7 @@ ${getFieldValue('oggetti')}
   formData.append("payload_json", JSON.stringify(payload));
 
   try {
-    const response = await fetch("https://discord.com/api/webhooks/1364602770254204958/OyPynSQEPLVmBRRUHS2rsD83RdptajUNyNID64FcG9zlPexKRcDbdGkKcJ54Q0LVHDX3?thread_id=1358105993841610994", {
+    const response = await fetch("https://discord.com/api/webhooks/1380271027866701945/-2UUn-dN6bN9FPNAy9rem2iZelBWzqAhXXsbGJDgLVwtad3BhmZ4WN8U2VlXcdDDA-gg?thread_id=1358105993841610994", {
       method: 'POST',
       body: formData,
     });
