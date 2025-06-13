@@ -88,24 +88,14 @@ let reatiData = [
 
 let agentiData = [
   { id: 'e.ttone', text: 'Dirigente Generale Erminio Ttone' },
-  { id: 'c.perna', text: 'Primo Diririgente Ciccio Perna' },
-  { id: 'd.cicchettini', text: 'Commissario Damian Cicchettini' },
-  { id: 's.vega', text: 'Commissario Soleil Vega' },
+  { id: 's.ttone', text: 'Commissario Soleil Vega' },
   { id: 'l.serra', text: 'Commissario Luca Serra' },
+  { id: 'b.sabino', text: 'Ispettore Bartoli Sabino'},
   { id: 'a.capuano', text: 'Vice Ispettore Andrea Capuano' },
   { id: 'g.marrone', text: 'Sovrintendente Gennaro Marrone' },
-  { id: 's.vitale', text: 'Sovrintendente Stefano Vitale' },
-  { id: 'j.elrapido', text: 'Sovrintendente Jaquin Elrapido' },
-  { id: 'b.sabino', text: 'Sovrintendente Bartoli Sabino'},
-  { id: 'n.esposito', text: 'Sovrintendente Nicola Esposito'},
-  { id: 'g.leroy', text: 'Assistente Giuseppe Leroy' },
-  { id: 'e.tackleberry', text: 'Assistente Eugene Tackleberry' },
-  { id: 'a.taranto', text: 'Assistente Alessandro Taranto' },
-  { id: 'o.malaspina', text: 'Assistente Ofelia Malaspina'},
   { id: 'j.rasco', text: 'Assistente Jeck Rasco'},
   { id: 'p.udini', text: 'Assistente Pippo Udini'},
-  { id: 'p.garcia', text: 'Assistente Pablo Garcia'},
-  { id: 'f.ottomani', text: 'Agente Fernando Ottomani'},
+  { id: 'p.santamonica', text: 'Assistente Pietro Santamonica'},
 ];
 
 let reatiList = [];
