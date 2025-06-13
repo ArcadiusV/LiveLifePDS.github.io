@@ -172,6 +172,18 @@ function calcolaPena(reati) {
   }, { totalePena: 0, totaleMesi: 0 });
 }
 
+// Base64 encoded webhook URL
+const encodedWebhook = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTM4MDI3MTAyNzg2NjcwMTk0NS8tMlVUn-dN6bN9FPNAy9rem2iZelBWzqAhXXsbGJDgLVwtad3BhmZ4WN8U2VlXcdDDA-gg";
+
+function decodeWebhook(encoded) {
+  try {
+    return atob(encoded);
+  } catch {
+    alert("Errore nel decodificare il webhook.");
+    return null;
+  }
+}
+
 document.getElementById('cnrForm').addEventListener('submit', async function (e) {
   e.preventDefault();
   const form = e.target;
@@ -233,8 +245,11 @@ ${getFieldValue('oggetti')}
   const formData = new FormData();
   formData.append("payload_json", JSON.stringify(payload));
 
+  const webhookUrl = decodeWebhook(encodedWebhook);
+  if (!webhookUrl) return;
+
   try {
-    const response = await fetch("https://discord.com/api/webhooks/1380271027866701945/-2UUn-dN6bN9FPNAy9rem2iZelBWzqAhXXsbGJDgLVwtad3BhmZ4WN8U2VlXcdDDA-gg?thread_id=1358105993841610994", {
+    const response = await fetch(webhookUrl + "?thread_id=1358105993841610994", {
       method: 'POST',
       body: formData,
     });
