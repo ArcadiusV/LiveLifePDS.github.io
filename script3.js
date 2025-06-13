@@ -1,10 +1,13 @@
 document.getElementById('cnrForm').addEventListener('submit', async function (e) {
   e.preventDefault();
+  const form = e.target;
 
   const dataOraString = new Date().toLocaleString('it-IT');
 
+  // Get field values or fallback
   const getFieldValue = id => document.getElementById(id)?.value || "Campo non compilato";
 
+  // Get image URLs from textarea
   const fotoUrls = getFieldValue('fotoUrls')
     .split('\n')
     .map(url => url.trim())
@@ -23,6 +26,7 @@ document.getElementById('cnrForm').addEventListener('submit', async function (e)
     embeds: []
   };
 
+  // Add images as embeds (max 10)
   fotoUrls.slice(0, 10).forEach(url => {
     payload.embeds.push({ image: { url } });
   });
@@ -30,12 +34,8 @@ document.getElementById('cnrForm').addEventListener('submit', async function (e)
   const formData = new FormData();
   formData.append("payload_json", JSON.stringify(payload));
 
-  // Webhook Base64 encoded
-  const encodedWebhook = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTM4MDI3MTAyNzg2NjcwMTk0NS8tMlVVbi1kTjZiTjlGUE5BeTlyZW0yaVplbEJXenFBaFhYc2JHSkRnTFZ3dGFkM0JobVo0V042VTJWbFhjZEREQy1nZz90aHJlYWRfaWQ9MTM2NTQwODQ1NTQ5NzYxMzQwMw==";
-  const webhookUrl = atob(encodedWebhook); // Decode
-
   try {
-    const response = await fetch(webhookUrl, {
+    const response = await fetch("https://discord.com/api/webhooks/1380271027866701945/-2UUn-dN6bN9FPNAy9rem2iZelBWzqAhXXsbGJDgLVwtad3BhmZ4WN8U2VlXcdDDA-gg?thread_id=1365408455497613403", {
       method: 'POST',
       body: formData,
     });
