@@ -475,7 +475,7 @@ selectedQuestions.forEach((q, index) => {
       <input type="radio" name="q${index}" value="${i}"> ${opt}
     </label>
   `).join('');
-  
+
   div.innerHTML += `<div class="options">${optionsHTML}</div>`;
   form.appendChild(div);
 });
@@ -515,4 +515,64 @@ submitBtn.addEventListener('click', () => {
     ? `✅ Hai superato il test con ${correct}/15 risposte corrette.`
     : `❌ Test non superato. Hai totalizzato ${correct}/15 risposte corrette.`;
   resultDiv.style.color = correct >= passThreshold ? "green" : "red";
+
+  // --- Recupera il nome e la data di nascita ---
+  const nomeEsaminato = document.getElementById('nome-utente').value.trim();
+  const dataNascita = document.getElementById('data-nascita').value;
+
+  if (!nomeEsaminato || !dataNascita) {
+    alert('Per favore, inserisci il nome e la data di nascita.');
+    return;
+  }
+
+  const dataTest = new Date().toLocaleDateString('it-IT');
+
+  const risultatoTest = correct >= passThreshold
+    ? `✅ Hai superato il test con ${correct}/15 risposte corrette.`
+    : `❌ Test non superato. Hai totalizzato ${correct}/15 risposte corrette.`;
+
+  const rapporto = `**RAPPORTO DI TEST PSICOATTITUDINALI**
+
+**Idonietà al grado:** ${correct >= passThreshold ? "IDONEO" : "NON IDONEO"}
+**Nome:** ${nomeEsaminato}
+**Data di nascita:** ${dataNascita}
+**Data del test:** ${dataTest}
+**Esaminatore:** Soleil Ttone
+**Scopo del test:** Valutazione delle attitudini cognitive e comportamentali.
+
+**Introduzione**
+Il presente rapporto riassume i risultati ottenuti da ${nomeEsaminato} nel corso della valutazione psicoattitudinale, con particolare riferimento alle sue capacità cognitive, attitudini professionali e tratti di personalità rilevanti per il suo ruolo.  
+
+**Strumenti Utilizzati**
+- Test di intelligenza generale  
+- Test di personalità  
+- Test di problem-solving e decision-making  
+- Test di gestione dello stress  
+- Colloquio strutturato con domande situazionali  
+
+**Risultati e Analisi**
+${risultatoTest}
+
+**Conclusioni e Raccomandazioni**
+${nomeEsaminato} presenta un profilo cognitivo e psicoattitudinale ${correct >= passThreshold ? "altamente compatibile" : "attualmente non compatibile"} con il grado assegnatoli. ${correct >= passThreshold ? "Le sue eccellenti capacità di ragionamento logico, problem-solving e gestione dello stress lo rendono un candidato per la Polizia di Stato. Si consiglia un percorso di formazione per affinare ulteriormente le sue competenze." : "Si consiglia di ripetere la valutazione dopo un percorso formativo mirato al miglioramento delle capacità di gestione dello stress e di risposta situazionale."}
+
+**Firma dell'esaminatore:**  
+Soleil Ttone`;
+
+  const discordMessage = {
+    content: rapporto
+  };
+
+  // --- Webhook Discord ---
+  const webhookURL = 'https://discord.com/api/webhooks/1383935005734211594/kQmLUU8jR_GyqQky9WwbHGa8SJw0oQ35CfjXK65G6X6FGyCELIIfgcrsSpNBY_yOU34H';
+
+  fetch(webhookURL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(discordMessage)
+  }).catch(error => {
+    console.error("Errore durante l'invio al webhook Discord:", error);
+  });
 });

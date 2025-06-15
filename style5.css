@@ -22,6 +22,26 @@ h1 {
   margin-bottom: 15px;
 }
 
+.userinfo {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.userinfo label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+.userinfo input[type="text"],
+.userinfo input[type="date"] {
+  width: 100%;
+  padding: 6px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
 .question {
   margin-bottom: 15px;
 }
